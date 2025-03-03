@@ -32,6 +32,12 @@ def generate_excuse():
     final_excuse = random_starter + " " + random_reason + " " + random_ending
     return final_excuse
 
-#print the excuse 
-print("Generating Excuse: ")
-print(final_excuse)
+#user input for customization
+num_excuses = int(input("Enter the number of excuses to generate: "))
+
+#Generate and excuses in bulk 
+print("Generated Excuses: ")
+for _ in range(num_excuses):
+    excuse = generate_excuse();
+    print(excuse)
+    print("-" * 40) #separator for better readability 
