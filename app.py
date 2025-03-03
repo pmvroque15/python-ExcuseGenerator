@@ -23,14 +23,11 @@ excuse_endings = [
 
 
 def generate_excuse():
-    #Random Generator
-    random_starter = random.choice(excuse_starters)
-    random_reason = random.choice(excuse_reasons)
-    random_ending = random.choice(excuse_endings)
-    
-    #Concatenate all the excuses 
-    final_excuse = random_starter + " " + random_reason + " " + random_ending
-    return final_excuse
+    excuse_parts = []
+    excuse_parts.append(random.choice(excuse_starters))
+    excuse_parts.append(random.choice(excuse_reasons))
+    excuse_parts.append(random.choice(excuse_endings))
+    return " ".join(excuse_parts)
 
 #user input for customization
 num_excuses = int(input("Enter the number of excuses to generate: "))
