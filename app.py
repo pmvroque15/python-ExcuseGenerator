@@ -22,14 +22,15 @@ excuse_endings = [
 ]
 
 
-#Random Generator
-random_starter = random.choice(excuse_starters)
-random_reason = random.choice(excuse_reasons)
-random_ending = random.choice(excuse_endings)
-
-
-#Concatenate all the excuses 
-final_excuse = random_starter + " " + random_reason + " " + random_ending
+def generate_excuse():
+    #Random Generator
+    random_starter = random.choice(excuse_starters)
+    random_reason = random.choice(excuse_reasons)
+    random_ending = random.choice(excuse_endings)
+    
+    #Concatenate all the excuses 
+    final_excuse = random_starter + " " + random_reason + " " + random_ending
+    return final_excuse
 
 #print the excuse 
 print("Generating Excuse: ")
